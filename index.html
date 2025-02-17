@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-removebg-preview (1).png" type="image/png">
+    <title>Home-Som-Films </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            margin: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: red;
+        }
+
+        .hero-section {
+            height: 100vh;
+            background: url('netflix-3733812.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            animation: slideIn 1.5s ease-in-out 0.5s;
+        }
+
+        .tutorials {
+            background-color: #1e1e1e;
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .tutorials h2 {
+            color: red;
+            font-size: 32px;
+            margin-bottom: 40px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .tutorial-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tutorial-card {
+            background-color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .tutorial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 0, 0, 0.6);
+        }
+
+        .tutorial-card video {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .tutorial-card:hover video {
+            transform: scale(1.1);
+        }
+
+        .tutorial-card h3 {
+            color: white;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Som-Films</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Movies pag.html">Movies</a>
+            <a href="Series Movies.html">Series</a>
+            <a href="about me.html" target="_blank">About </a>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <div>
+            <h1>Welcome to Som-Films</h1>
+            <p>Watch the latest movies and series anytime, anywhere.</p>
+        </div>
+    </div>
+
+    <div id="tutorials" class="tutorials">
+        <h2>Movies Som-Films</h2>
+        <div class="tutorial-container">
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="What Happened At the Crash Site ｜ Surviving Black Hawk Down ｜ Netflix.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Black Hawk Down</h3>
+            </div>
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="download.1739532780888.publer.com.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Squid Game Season 2</h3>
+            </div>
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="DHAGAR QABE Full Movie _ Somali Film - by Abdiwali Omar Jamaal.publer.com.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Dhagar</h3>
+            </div>
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="HORDHACA TAXANAHA ARDAY 2023.publer.com.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Taxanaha Arday</h3>
+            </div>
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="Taxanaha Dabin _ Season 1 _ Official Trailer _ 2024..publer.com.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Taxanaha DABIN</h3>
+            </div>
+            <div class="tutorial-card">
+                <video controls>
+                    <source src="Halkee Ayaad U Baxsaneysaa Haddii Isbitaalada Ay Halis Ku Noqdaan Caafimaadkaaga_.publer.com.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Taxanaha SHABAKAD</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
