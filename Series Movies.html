@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo-removebg-preview (1).png" type="image/png">
-    <title>Series - Samo Flix</title>
+    <title>Series - Som Films</title>
     <style>
         body {
             margin: 0;
@@ -14,11 +13,27 @@
             text-align: center;
         }
         .navbar {
-            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
             background-color: black;
+        }
+        .logo {
             font-size: 26px;
             font-weight: bold;
             color: red;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background-color: red;
         }
         .series-container {
             display: flex;
@@ -64,10 +79,29 @@
             display: none;
             margin-top: 20px;
         }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">SOM-Films</div>
+    <div class="navbar">
+        <div class="logo">Samo Flix</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Movies pag.html">Movies</a>
+            <a class="active" href="Series Movies.html">Series</a>
+            <a href="about me.html">About</a>
+        </div>
+    </div>
     <div class="series-container">
         <div class="series" onclick="toggleSeasons('ARDAY')">
             <img src="Sawir Arday.png" alt="ARDAY">
