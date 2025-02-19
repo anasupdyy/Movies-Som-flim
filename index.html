@@ -167,20 +167,74 @@
             font-size: 20px;
             margin-top: 15px;
         }
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .sawir {
+            width: 70px;
+            margin-right: 10px; /* Si uu u kala fogaado */
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="logo">Samo-Flix</div>
+   <div class="navbar">
+        <div class="logo-container">
+            <img class="sawir" src="logo-removebg-preview (1).png" alt="Logo">
+            <div class="logo">Som-Films</div>
+        </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="Movies pag.html">Movies</a>
             <a href="Series Movies.html">Series</a>
-            <a href="about me.html" target="_blank">About </a>
+            <a href="about me.html" target="_blank">About</a>
         </div>
     </div>
-
     <div class="hero-section">
         <div>
             <h1>Welcome to Samo Flix</h1>
