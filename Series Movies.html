@@ -3,272 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo-removebg-preview (1).png" type="image/png">
-    <title>Series - Som Films</title>
-    
+    <title>Series - Samo Flix</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #141414;
             color: white;
+            text-align: center;
         }
-
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
+            padding: 15px;
             background-color: black;
-        }
-
-        .logo {
             font-size: 26px;
             font-weight: bold;
             color: red;
         }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 8px 12px;
-            text-align: center;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            background-color: red;
-        }
-
         .series-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            padding: 20px;
             justify-content: center;
+            padding: 20px;
         }
-
         .series {
-            width: 300px;
+            width: 250px;
             background: #222;
             border-radius: 10px;
             overflow: hidden;
-            transition: 0.3s;
             cursor: pointer;
-            position: relative;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            padding-bottom: 10px;
         }
-
         .series:hover {
             transform: scale(1.05);
         }
-
         .series img {
             width: 100%;
-            height: 180px;
+            height: 150px;
             object-fit: cover;
         }
-
-        .series-title {
-            padding: 12px;
-            background-color: #333;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
         .seasons, .episodes {
             display: none;
             padding: 10px;
             background: #111;
         }
-
         .season, .episode {
-            padding: 8px;
+            padding: 10px;
             background: #333;
             margin: 5px 0;
             border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
         }
-
         .season:hover, .episode:hover {
             background-color: red;
         }
-
         .video-player {
             display: none;
-            text-align: center;
             margin-top: 20px;
-        }
-
-        .video-player video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                margin-top: 10px;
-            }
-
-            .series {
-                width: 100%;
-            }
-
-            .video-player video {
-                width: 100%;
-                height: auto;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">SOM-Films</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="Movies pag.html">Movies</a>
-            <a class="active" href="Series.html">Series</a>
-            <a href="about me.html" target="_blank">About </a>
-        </div>
-    </div>
-
+    <div class="navbar">SOM-Films</div>
     <div class="series-container">
-        <!-- Series 1 -->
-        <div class="series" onclick="toggleSeasons('series1')">
-            <img src="Sawir Arday.png" alt="Series 1">
-            <div class="series-title"> ARDAY</div>
-            <div class="seasons" id="series1">
-                <div class="season" onclick="toggleEpisodes(event, 'season1')">Season 1</div>
+        <div class="series" onclick="toggleSeasons('ARDAY')">
+            <img src="Sawir Arday.png" alt="ARDAY">
+            <div class="series-title">ARDAY</div>
+            <div class="seasons" id="ARDAY">
+                <div class="season" onclick="toggleEpisodes(event, 'season1ARDAY')">Season 1</div>
             </div>
         </div>
-
-        <!-- Series 2 -->
-        <div class="series" onclick="toggleSeasons('series2')">
-            <img src="DABIN SAWIR.png" alt="Series 2">
-            <div class="series-title"> DABIN</div>
-            <div class="seasons" id="series2">
-                <div class="season" onclick="toggleEpisodes(event, 'season3')">Season 1</div>
+        <div class="series" onclick="toggleSeasons('DARIS')">
+            <img src="Daris  Sawir.png" alt="DARIS">
+            <div class="series-title">DARIS</div>
+            <div class="seasons" id="DARIS">
+                <div class="season" onclick="toggleEpisodes(event, 'season1DARIS')">Season 1</div>
             </div>
         </div>
-
-        <!-- Series 3 -->
-        <div class="series" onclick="toggleSeasons('series3')">
-            <img src="Daris  Sawir.png" alt="Series 3">
-            <div class="series-title">  DARIS</div>
-            <div class="seasons" id="series3">
-                <div class="season" onclick="toggleEpisodes(event, 'season5')">Season 1</div>
+        <div class="series" onclick="toggleSeasons('DABIN')">
+            <img src="DABIN SAWIR.png" alt="DABIN">
+            <div class="series-title">DABIN</div>
+            <div class="seasons" id="DABIN">
+                <div class="season" onclick="toggleEpisodes(event, 'season1DABIN')">Season 1</div>
             </div>
         </div>
-        <div class="series" onclick="toggleSeasons('series4')">
-            <img src="Sawir Shabakad.png" alt="Series 1">
-            <div class="series-title">SHABAKAD</div>
-            <div class="seasons" id="series1">
-                <div class="season" onclick="toggleEpisodes(event, 'season1')">Season 9</div>
-            </div>
-            
-        </div>
-        <div class="series" onclick="toggleSeasons('series5')">
-            <img src="Sawir Money Heist.avif" alt="Series 1">
-            <div class="series-title">MONEY HEIST</div>
-            <div class="seasons" id="series1">
-                <div class="season" onclick="toggleEpisodes(event, 'season1')">Season 9</div>
-            </div>
-            
     </div>
-    <div class="series" onclick="toggleSeasons('series5')">
-        <img src="squed game.jpeg" alt="Series 1">
-        <div class="series-title">SQUED GAME</div>
-        <div class="seasons" id="series1">
-            <div class="season" onclick="toggleEpisodes(event, 'season1')">Season 9</div>
-        </div>
-        
-</div>
-    <!-- Episodes -->
-    <div class="episodes" id="season1">
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 1AAD _ FAARAX.publer.com.mp4')">Episode 1</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 2AAD _ HIBO.publer.com.mp4')">Episode 2</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 3AAD _ PRANK.publer.com.mp4')">Episode 3</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 4AAD _ ISMAHAN.publer.com.mp4')">Episode 4</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 5AAD _ SEYNAB.publer.com.mp4')">Episode 5</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 6AAD _ RAKAATO.publer.com.mp4')">Episode 6</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 7AAD _ DAMBIILE.publer.com.mp4')">Episode 7</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 8AAD _ CAADO & DHAQAN.publer.com.mp4')">Episode 8</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 9 & 10AAD _ SIR IYO CAAD.publer.com (5).mp4')">Episode 9</div>
-        <div class="episode" onclick="playVideo('TAXANAHA ARDAY _ XALQADA 9 & 10AAD _ SIR IYO CAAD.publer.com (5).mp4')">Episode 10</div>
+    <div class="episodes" id="season1DABIN">
+        <div class="episode" onclick="playVideo('1RNBI0rMLAAZTo077X7A9xli4fVYNugt1')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 2</div>
     </div>
-    
-    <!-- <div class="episodes" id="season2">
-        <div class="episode" onclick="playVideo('')">Episode 1</div>
-        <div class="episode" onclick="playVideo('Episode_2.mp4')">Episode 5</div>
-    </div> -->
-
-    <div class="episodes" id="season3">
-        <div class="episode" onclick="playVideo('taxanaha (dabin) part 1.publer.com (1).mp4')">Episode 1</div>
-        <div class="episode" onclick="playVideo('Musalsalka Dabin __ Season 1 _ xalqadiisi 2aad __ nasriyo bilaal way is jeclaayen _ #dabin.publer.com.mp4')">Episode 2</div>
-        <div class="episode" onclick="playVideo('Musalsalka dabin __ season 1 __ xalqadiisi 3aad __ raage __ #dabin #dabinseries.publer.com.mp4')">Episode 3</div>
+    <div class="episodes" id="season1DARIS">
+        <div class="episode" onclick="playVideo('1Xct4T3gIG-VNuDXEulyyXPrcnXAyBJw-')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 2</div>
     </div>
-
-    <!-- <div class="episodes" id="season4">
-        <div class="episode" onclick="playVideo('Episode_3.mp4')">Episode 1</div>
-        <div class="episode" onclick="playVideo('Episode_4.mp4')">Episode 2</div>
-    </div> -->
-    <div class="episodes" id="season5">
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 1-AAD.publer.com.mp4')">Episode 1</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 2-AAD.publer.com.mp4')">Episode 2</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 3-AAD.publer.com.mp4')">Episode 3</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 4-AAD.publer.com.mp4')">Episode 4</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 5-AAD.publer.com.mp4')">Episode 5</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 6-AAD.publer.com.mp4')">Episode 6</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 7-AAD.publer.com.mp4')">Episode 7</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 8-AAD.publer.com.mp4')">Episode 8</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 9-AAD.publer.com.mp4')">Episode 9</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 10-AAD.publer.com.mp4')">Episode 10</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 11-AAD “ADKAATAY!”.publer.com.mp4')">Episode 11</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 12-AAD.publer.com.mp4')">Episode 12</div>
-        <div class="episode" onclick="playVideo('TAXANAHA DARISKA _ XALQADDA 13-AAD.publer.com.mp4')">Episode 13</div>
+    <div class="episodes" id="season1ARDAY">
+        <div class="episode" onclick="playVideo('1Xct4T3gIG-VNuDXEulyyXPrcnXAyBJw-')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 2</div>
     </div>
-
-    <div class="episodes" id="season6">
-        <div class="episode" onclick="playVideo('Episode_7.mp4')">Episode 1</div>
-        <div class="episode" onclick="playVideo('Episode_8.mp4')">Episode 2</div>
-    </div>
-
-    <!-- Video Player -->
     <div class="video-player" id="videoPlayer">
-        <h2>Now Playing</h2>
-        <video id="videoFrame" controls>
-            <source src="" id="videoSource" type="video/mp4">
-        </video>
+        <iframe id="videoFrame" width="380" height="480" src="" allowfullscreen></iframe>
     </div>
-
     <script>
         function toggleSeasons(seriesId) {
             document.querySelectorAll('.seasons').forEach(div => div.style.display = 'none');
+            document.querySelectorAll('.episodes').forEach(div => div.style.display = 'none');
             document.getElementById(seriesId).style.display = 'block';
         }
-
         function toggleEpisodes(event, seasonId) {
             event.stopPropagation();
             document.querySelectorAll('.episodes').forEach(div => div.style.display = 'none');
             document.getElementById(seasonId).style.display = 'block';
+            event.target.parentElement.style.display = 'none';
         }
-
-        function playVideo(videoUrl) {
+        function playVideo(videoId) {
+            document.querySelectorAll('.episodes').forEach(div => div.style.display = 'none');
             document.getElementById('videoPlayer').style.display = 'block';
-            var videoSource = document.getElementById('videoSource');
-            videoSource.src = videoUrl;  // Set the video URL to the clicked episode
-            var videoPlayer = document.getElementById('videoFrame');
-            videoPlayer.load();  // Reload the video to apply the new source
-            videoPlayer.play();  // Start playing the video
+            document.getElementById('videoFrame').src = `https://drive.google.com/file/d/${videoId}/preview`;
         }
     </script>
 </body>
