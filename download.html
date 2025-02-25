@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogga Quruxda Badan</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #dc0404;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+
+        /* Video Carousel Styling */
+        .video-carousel {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 30px;
+        }
+        .video-carousel video {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #1410cd;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #e00000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .coming-soon {
+            background-color: #dc0404;
+            color: rgb(0, 0, 0);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .coming-soon h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+        .slideshow-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+        .slideshow-container img:hover {
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Bogga Quruxda Badan</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="download.html">Download</a>
+        <a href="index.html">Home</a>
+        <a href="Movies pag.html">Movies</a>
+        <a href="Series Movies.html">series</a>
+    </nav>
+    <div class="coming-soon">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="DABIN SAWIR.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="Dhagar.png" >
+            </div>
+            <div class="mySlides fade">
+                <img src="Sawir Money Heist.avif" >
+            </div>
+            <div class="mySlides fade">
+                <img src="Sawir Arday.png" >
+            </div>
+            <div class="mySlides fade">
+                <img src="Sawir Qab iyo iil.png" >
+            </div>
+            <div class="mySlides fade">
+                <img src="Jahwareer.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="Sawir Shabakad.png" >
+            </div>
+            <div class="mySlides fade">
+                <img src="squed game.jpeg" >
+            </div>
+            <div class="mySlides fade">
+                <img src="Heyb Sooc Sawir.png" >
+            </div>
+            <div class="mySlides fade">
+                <img src="aliya.png" >
+            </div>
+        </div>
+    </div>
+    <!-- Video Carousel -->
+    <div class="video-carousel">
+        <video id="video1" autoplay muted>
+            <source src="HORDHACA TAXANAHA ARDAY 2023.publer.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video2" autoplay muted style="display:none;">
+            <source src="What Happened At the Crash Site ｜ Surviving Black Hawk Down ｜ Netflix.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video3" autoplay muted style="display:none;">
+            <source src="Halkee Ayaad U Baxsaneysaa Haddii Isbitaalada Ay Halis Ku Noqdaan Caafimaadkaaga_.publer.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add more videos if needed -->
+    </div>
+
+    <!-- Download Button -->
+    <button class="download-btn" onclick="window.location.href='download-link.zip'">Download App</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bogga Quruxda Badan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Video Carousel Logic
+        let currentVideoIndex = 0;
+        const videos = document.querySelectorAll('.video-carousel video');
+        
+        function playNextVideo() {
+            // Hide the current video
+            videos[currentVideoIndex].style.display = 'none';
+            
+            // Increment the video index
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            
+            // Show the next video
+            videos[currentVideoIndex].style.display = 'block';
+        }
+
+        // Play next video when current video ends
+        videos.forEach(video => {
+            video.addEventListener('ended', playNextVideo);
+        });
+
+        // Show the first video initially
+        videos[0].style.display = 'block';
+    </script>
+    <script>
+         let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";    
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+showSlides();
+    </script>
+</body>
+</html>
