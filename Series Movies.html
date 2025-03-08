@@ -98,10 +98,10 @@
     <div class="navbar">
         <div class="logo">Samo Flix</div>
         <div class="nav-links">
+            <a href="download.html">Download</a>
             <a href="index.html">Home</a>
             <a href="Movies pag.html">Movies</a>
             <a class="active" href="Series Movies.html">Series</a>
-            <a href="about me.html">About</a>
         </div>
     </div>
     <div class="series-container">
@@ -126,6 +126,86 @@
                 <div class="season" onclick="toggleEpisodes(event, 'season1DABIN')">Season 1</div>
             </div>
         </div>
+        <div class="series" onclick="toggleSeasons('CALAF')">
+            <img src="Sawirka Calaf.png" alt="CALAF">
+            <div class="series-title">CALAF</div>
+            <div class="seasons" id="CALAF">
+                <div class="season" onclick="toggleEpisodes(event, 'season1CALAF')">Season 1</div>
+            </div>
+        </div>
+        <div class="series" onclick="toggleSeasons('MONEYHEIST')">
+            <img src="VENDETTA, la casa de papel - VENDETTA.gif" alt="MONEY HEIST">
+            <div class="series-title">MONEY HEIST</div>
+            <div class="seasons" id="MONEYHEIST">
+                <div class="season" onclick="toggleEpisodes(event, 'season1MONEYHEIST')">Season 1</div>
+                <div class="season" onclick="toggleEpisodes(event, 'season2MONEYHEIST')">Season 2</div>
+                <div class="season" onclick="toggleEpisodes(event, 'season3MONEYHEIST')">Season 3</div>
+                <div class="season" onclick="toggleEpisodes(event, 'season4MONEYHEIST')">Season 4</div>
+            </div>
+        </div>
+        <div class="series" onclick="toggleSeasons('JACKRYAN')">
+            <img src="jack ryan sawir.png" alt="JACKRYAN">
+            <div class="series-title">JACK RYAN</div>
+            <div class="seasons" id="JACKRYAN">
+                <div class="season" onclick="toggleEpisodes(event, 'season1JACKRYAN')">Season 1</div>
+            </div>
+        </div>
+        <div class="series" onclick="toggleSeasons('SHABAKAD')">
+            <img src="Sawir Shabakad.png" alt="SHABAKAD">
+            <div class="series-title">SHABAKAD</div>
+            <div class="seasons" id="SHABAKAD">
+                <div class="season" onclick="toggleEpisodes(event, 'season1SHABAKAD')">Season 1</div>
+            </div>
+        </div>
+    </div>
+    <div class="episodes" id="season1CALAF">
+        <div class="episode" onclick="playVideo('1RNBI0rMLAAZTo077X7A9xli4fVYNugt1')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 1</div>
+    </div>
+    
+    <div class="episodes" id="season1MONEYHEIST">
+        <div class="episode" onclick="playVideo('1Q3cnaGEoPaAs8MW8IqjXF70AYBV-AQJW')">Episode 1</div>
+        <div class="episode" onclick="playVideo('10OkZzmGM4qdVDlmEfSzOUblMP8UEpGa_')">Episode 2</div>
+        <div class="episode" onclick="playVideo('1MdDi_R6KmXmApTzKifkbDjvV1JSyYtiP')">Episode 3</div>
+        <div class="episode" onclick="playVideo('1XgTYrvV6HfbRHlVf_He-xjS88OSVQ0m2')">Episode 4</div>
+        <div class="episode" onclick="playVideo('1sncEpBD0N_dNH19oWW_CiFV0GKFPaZJL')">Episode 5</div>
+        <div class="episode" onclick="playVideo('1WkT5IVlx5Xw1Auxz064yp-oGZfjhUuHf')">Episode 6</div>
+        <div class="episode" onclick="playVideo('1HaTa6TVwgVpXhMG9clugMiO6VE6xlHld')">Episode 7</div>
+        <div class="episode" onclick="playVideo('1VcCb27yCbebMnG8ywWatKhgMPAiqX5AX')">Episode 8</div>
+        <div class="episode" onclick="playVideo('1bKB-h3XkdX21qVIi3QHkvxSCmHUYeq1Z')">Episode 9</div>
+        <div class="episode" onclick="playVideo('14b1k9vq2no4wChdmandlRkLGVw1EKD1x')">Episode 10</div>
+        <div class="episode" onclick="playVideo('1FE8fmtqN5ajqxAlCXl2_ww76aVfZPgoW')">Episode 11</div>
+        <div class="episode" onclick="playVideo('1Qd-NuJYUkBahkHXdzHhNj2BXWPPpWvMM')">Episode 12</div>
+    </div>
+    <div class="episodes" id="season2MONEYHEIST">
+        <div class="episode" onclick="playVideo('1nJCvKmUIMJJGrvML73EA5Cs0KA1w6T-U')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1btVR9nCh8R8UO570Q_sCNX0NEZ3nqUlX')">Episode 2</div>
+        <div class="episode" onclick="playVideo('10iouYt0vrSKRyk47X-eIn_S6RTU-RpVc')">Episode 3</div>
+        <div class="episode" onclick="playVideo('10PdG5k0CfbMDibiB_eRhoJxtwuWhKR-N')">Episode 4</div>
+        <div class="episode" onclick="playVideo('1vEUFUeOttv0HzR3KemH-lsW0cPKBoHWM')">Episode 5</div>
+        <div class="episode" onclick="playVideo('1z10ZsDxFb09hA4hwppdLyDkccXSSMfSt')">Episode 6</div>
+        <div class="episode" onclick="playVideo('16u8umj4Rpd6wnG0nb9wp4EF4Zn44HlKm')">Episode 7</div>
+        <div class="episode" onclick="playVideo('1tA_coyylsBmin_yhnXkQrm6nbr2XnyOq')">Episode 8</div>
+        <div class="episode" onclick="playVideo('1i2DhW4oCFg9PbaZ79UtnH7fwL72pMkOx')">Episode 9</div>
+    </div>
+    <div class="episodes" id="season3MONEYHEIST">
+        <div class="episode" onclick="playVideo('1-ZH4XvGWC6iofTTsCuFVjso9A9ZHuTX7')">Episode 1</div>
+        <div class="episode" onclick="playVideo('173Pw45nhGD7kPgINQiAnkAKet_Ejdqbg')">Episode 2</div>
+        <div class="episode" onclick="playVideo('1TP59y5nMSwWSigcLTEuLU_3IqwAZi-AN')">Episode 3</div>
+        <div class="episode" onclick="playVideo('1oKrm9uThQnzBCHCOT_ZvIpjW-W6d_Lp5')">Episode 4</div>
+        <div class="episode" onclick="playVideo('1TKS7J6pIrEUmPOW8ym90qgl88W2VWb3-')">Episode 5</div>
+        <div class="episode" onclick="playVideo('1uCx27LCPK4nacnQ8orDrLSCnIPKW-UvJ')">Episode 6</div>
+        <div class="episode" onclick="playVideo('1MqhCd15l2D2IZR6ojyP2l8oZD7QcVM27')">Episode 7</div>
+        <div class="episode" onclick="playVideo('1n4jmoqaOOuvR-Gt60lu-Bd2xIr4zcFy_')">Episode 8</div>
+    </div>
+    <div class="episodes" id="season4MONEYHEIST">
+        <div class="episode" onclick="playVideo('1qtJcXshWSgS1bzNEzkZ7fLtY4O_la6Nx')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1FCu29DrT-I2fLcVQ9cdbe_auS_wiVTNU')">Episode 2</div>
+        <div class="episode" onclick="playVideo('1kp3Kw6RdUM1LQWDqmGiW9Nm5Q8bp7WTw')">Episode 3</div>
+        <div class="episode" onclick="playVideo('1pUNCGPdb9HSw5tY0r0FnJCgqssSkIpon')">Episode 4</div>
+        <div class="episode" onclick="playVideo('1Wsrgk2LNZmjUakuDcaascOoBHfHXSJ-1')">Episode 5</div>
+        <div class="episode" onclick="playVideo('1Yfy3PpfR015-qSqbzRakWahZLa2PpxLx')">Episode 6</div>
+        <div class="episode" onclick="playVideo('1U3rugwDv87Et7NpqIrf3vSDbdKIPMo94')">Episode 7</div>
     </div>
     <div class="episodes" id="season1DABIN">
         <div class="episode" onclick="playVideo('1RNBI0rMLAAZTo077X7A9xli4fVYNugt1')">Episode 1</div>
@@ -156,6 +236,14 @@
            <div class="episode" onclick="playVideo('1FQDPPtGOKihzQF9xx8LhkCz_vsnPs5SU')">Episode 8</div>
            <div class="episode" onclick="playVideo('11ZrPe0q_f0LYpsZo70v8mWKed6wielKn')">Episode 9</div>
            <div class="episode" onclick="playVideo('11ZrPe0q_f0LYpsZo70v8mWKed6wielKn')">Episode 10</div>
+    </div>
+    <div class="episodes" id="season1JACKRYAN">
+        <div class="episode" onclick="playVideo('1RNBI0rMLAAZTo077X7A9xli4fVYNugt1')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 1</div>
+    </div>
+    <div class="episodes" id="season1SHABAKAD">
+        <div class="episode" onclick="playVideo('1RNBI0rMLAAZTo077X7A9xli4fVYNugt1')">Episode 1</div>
+        <div class="episode" onclick="playVideo('1A2b3C4d5E6F7G8H9I0J')">Episode 1</div>
     </div>
     <div class="video-player" id="videoPlayer">
         <iframe id="videoFrame" width="380" height="480" src="" allowfullscreen></iframe>
